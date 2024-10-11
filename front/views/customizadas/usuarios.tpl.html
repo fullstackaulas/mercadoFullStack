@@ -1,0 +1,63 @@
+<div class="layout-content-body">
+  <div class="title-bar">
+    <h1 class="title-bar-title">
+      <span class="d-ib">Criação de usuários</span>
+    </h1>
+    <p class="title-bar-description">
+      <small>Nesta tela você pode criar usuários para acessar o sistema. Importante! Todo usuário criado já tem acesso imediato a plataforma.</small>
+    </p>
+  </div><!-- /.title-bar -->
+  <div class="row p-y-lg">
+    <div class="col-md-6 col-md-offset-3">
+      <form role="form" name="form_validation" novalidate ng-submit="formValidation()">
+       
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.email.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="email" name="email" spellcheck="false" autocomplete="off" ng-model="email" required>
+          <label class="md-control-label">Email</label>
+        </div>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
+          <label class="md-control-label">Name</label>
+          <small class="md-help-block">Digite seu nome completo.</small>
+        </div>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="password" name="name" spellcheck="false" ng-model="name" required>
+          <label class="md-control-label">Senha</label>
+          <small class="md-help-block">A senha deve conter 6 dígitos no mínimo</small>
+        </div>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
+          <label class="md-control-label">Cpf</label>
+        </div>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
+          <label class="md-control-label">Nascimento</label>
+        </div>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
+          <label class="md-control-label">Sexo</label>
+        </div>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
+          <label class="md-control-label">Celular</label>
+        </div>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
+          <input id="form-control-telefone" class="md-form-control" type="text" data-inputmask="'mask': '(99) 99999-9999'">
+          
+          <label class="md-control-label">Telefone</label>
+          <small class="md-help-block">Não é obrigatório preencher um telefone fixo, o sistema aceita 2 celulares.</small>
+        </div>
+   
+        
+        <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+      </form>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /.layout-content-body -->
