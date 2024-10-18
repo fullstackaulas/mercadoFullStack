@@ -127,7 +127,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
       templateUrl: "views/app.tpl.html",
     })
 
-    .state("dashboards.usuarioscriar", {
+    .state("dashboards.usuariosCriar", {
       url: "/usuariosCriar",
       controller: "UsuariosCtrl",
       templateUrl: "views/customizadas/usuarios.tpl.html",
@@ -139,8 +139,20 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
         }
       }
     })
-
-
+    .state("dashboards.usuariosListar", {
+      url: "/usuariosListar",
+      controller: "UsuariosCtrl",
+      templateUrl: "views/customizadas/usuarios.listar.tpl.html",
+      resolve: {
+        loadPlugins: function($ocLazyLoad) {
+          return $ocLazyLoad.load(
+            "js/vendor/inputmask/jquery.inputmask.bundle.min.js"
+          );
+        }, loadDatatables: function($ocLazyLoad) {
+            return $ocLazyLoad.load("datatables");
+          }
+      }
+    })
     .state("dashboards.dashboard-1", {
       url: "/dashboard",
       controller: "DashboardCtrl",

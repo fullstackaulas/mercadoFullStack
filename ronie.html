@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Filmes De Locadora</title>
+    <style>
+        body {
+            background-color: black; /* Define o fundo da página como preto */
+            color: rgba(255, 255, 255, 0.541); /* Define a cor do texto como branco para melhor contraste */
+            margin: 0; /* Remove margens padrão */
+            padding: 0; /* Remove padding padrão */
+        }
+        .img-custom {
+            width: 350px; /* Define a largura da imagem */
+            height: 250px; /* Define a altura da imagem */
+            object-fit: cover; /* Corta a imagem caso necessário, mantendo a proporção */
+            margin: 5px; /* Adiciona margem ao redor das imagens */
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1><marquee>Filmes De Locadora</marquee></h1>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
+                <ul class="navbar-nav" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Filmes De Locadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Series</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="Series" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                            Opções
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ação</a></li>
+                            <li><a class="dropdown-item" href="#">Comédia</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Animação</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Plano</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-info">
+        <h2>Filmes</h2>
+    </div>
+
+    <div class="container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="carousel-inner">
+                <!-- Slides serão inseridas aqui dinamicamente -->
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">próximo</span>
+            </a>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <img src="img/0_m.jpg" class="img-fluid img-custom" alt="Filme 1">
+            </div>
+            <div class="col-md-2">
+                <img src="img/1m.jpg" class="img-fluid img-custom" alt="Filme 2">
+            </div>
+            <div class="col-md-2">
+                <img src="img/2.jpg" class="img-fluid img-custom" alt="Filme 3">
+            </div>
+            <div class="col-md-2">
+                <img src="img/2f9dfa8f-d23b-4695-876a-81ac7bf8dc3f_m.jpg" class="img-fluid img-custom" alt="Filme 4">
+            </div>
+            <div class="col-md-2">
+                <img src="img/3e1f351b-2d52-4c2c-a9e6-814de35bb531_m.jpg" class="img-fluid img-custom" alt="Filme 5">
+            </div>
+            <div class="col-md-2">
+                <img src="img/432ccca5-6674-4728-8791-3967150d3833_m.jpg" class="img-fluid img-custom" alt="Filme 6">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">
+                <img src="img/5_m.jpg" class="img-fluid img-custom" alt="Filme 7">
+            </div>
+            <div class="col-md-2">
+                <img src="img/7e7d7ec8-834c-4264-9b6d-4dcc46b5d875_m.jpg" class="img-fluid img-custom" alt="Filme 8">
+            </div>
+            <div class="col-md-2">
+                <img src="img/8ce1814d-2826-4fd1-a666-11474cc1b94b_m.jpg" class="img-fluid img-custom" alt="Filme 9">
+            </div>
+            <div class="col-md-2">
+                <img src="img/a28b2916-bb6f-43b2-b25f-f5faa8da76ad_m.jpg" class="img-fluid img-custom" alt="Filme 10">
+            </div>
+            <div class="col-md-2">
+                <img src="img/d8675e40-dbf9-4e6a-8d6e-643a08f19910_m.jpg" class="img-fluid img-custom" alt="Filme 11">
+            </div>
+            <div class="col-md-2">
+                <img src="img/D_NQ_NP_726129-MLB48822100034_012022-W.jpg" class="img-fluid img-custom" alt="Filme 12">
+            </div>
+        </div>
+
+        <div class="container-fluid bg-info">
+            <h2>Series</h2>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">
+                <img src="img/5_m.jpg" class="img-fluid img-custom" alt="Filme 7">
+            </div>
+            <div class="col-md-2">
+                <img src="img/7e7d7ec8-834c-4264-9b6d-4dcc46b5d875_m.jpg" class="img-fluid img-custom" alt="Filme 8">
+            </div>
+            <div class="col-md-2">
+                <img src="img/8ce1814d-2826-4fd1-a666-11474cc1b94b_m.jpg" class="img-fluid img-custom" alt="Filme 9">
+            </div>
+            <div class="col-md-2">
+                <img src="img/a28b2916-bb6f-43b2-b25f-f5faa8da76ad_m.jpg" class="img-fluid img-custom" alt="Filme 10">
+            </div>
+            <div class="col-md-2">
+                <img src="img/d8675e40-dbf9-4e6a-8d6e-643a08f19910_m.jpg" class="img-fluid img-custom" alt="Filme 11">
+            </div>
+            <div class="col-md-2">
+                <img src="img/D_NQ_NP_726129-MLB48822100034_012022-W.jpg" class="img-fluid img-custom" alt="Filme 12">
+            </div>
+        </div>
+
+        <div class="container-fluid bg-info">
+            <h2>Filmes que Você Visitou</h2>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">
+                <img src="img/5_m.jpg" class="img-fluid img-custom" alt="Filme 7">
+            </div>
+            <div class="col-md-2">
+                <img src="img/7e7d7ec8-834c-4264-9b6d-4dcc46b5d875_m.jpg" class="img-fluid img-custom" alt="Filme 8">
+            </div>
+            <div class="col-md-2">
+                <img src="img/8ce1814d-2826-4fd1-a666-11474cc1b94b_m.jpg" class="img-fluid img-custom" alt="Filme 9">
+            </div>
+            <div class="col-md-2">
+                <img src="img/a28b2916-bb6f-43b2-b25f-f5faa8da76ad_m.jpg" class="img-fluid img-custom" alt="Filme 10">
+            </div>
+            <div class="col-md-2">
+                <img src="img/d8675e40-dbf9-4e6a-8d6e-643a08f19910_m.jpg" class="img-fluid img-custom" alt="Filme 11">
+            </div>
+            <div class="col-md-2">
+                <img src="img/D_NQ_NP_726129-MLB48822100034_012022-W.jpg" class="img-fluid img-custom" alt="Filme 12">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j6f3JQpjt9e5p6U6p6c6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const filmes = [
+                { title: "", image: "img/0_m.jpg", active: true },
+                { title: "", image: "img/1m.jpg", active: false },
+                { title: "", image: "img/2.jpg", active: false },
+                { title: "", image: "img/22-W.jpg", active: false }
+            ];
+
+            const carouselInner = document.getElementById("carousel-inner");
+
+            filmes.forEach(filme => {
+                const slide = document.createElement("div");
+                slide.className = `carousel-item${filme.active ? ' active' : ''}`;
+                slide.innerHTML = `
+                    <img src="${filme.image}" class="d-block w-100 img-custom" alt="${filme.title}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>${filme.title}</h5>
+                    </div>
+                `;
+                carouselInner.appendChild(slide);
+            });
+
+            // Inicializa o carrossel
+            $('#carouselExampleIndicators').carousel({
+                interval: 2000, // Troca de slide a cada 3 segundos
+                ride: 'carousel'
+            });
+        });
+    </script>
+</body>
+</html>

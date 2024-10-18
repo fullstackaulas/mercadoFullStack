@@ -12,47 +12,48 @@
       <form role="form" name="form_validation" novalidate ng-submit="formValidation()">
        
         <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.email.$invalid && form_validation.submitted }">
-          <input class="md-form-control" type="email" name="email" spellcheck="false" autocomplete="off" ng-model="email" required>
+          <input class="md-form-control" type="email" name="email" spellcheck="false" autocomplete="off" ng-model="usuario.email" required>
           <label class="md-control-label">Email</label>
         </div>
 
-        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
-          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
-          <label class="md-control-label">Name</label>
-          <small class="md-help-block">Digite seu nome completo.</small>
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.nome.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="nome" spellcheck="false" ng-model="usuario.nome" required>
+          <label class="md-control-label">Nome completo</label>
         </div>
 
-        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
-          <input class="md-form-control" type="password" name="name" spellcheck="false" ng-model="name" required>
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.senha.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="password" name="senha" spellcheck="false" ng-model="usuario.senha" required>
           <label class="md-control-label">Senha</label>
-          <small class="md-help-block">A senha deve conter 6 dígitos no mínimo</small>
         </div>
 
-        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
-          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.cpf.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="cpf" spellcheck="false" ng-model="usuario.cpf" required data-inputmask="'mask': '999.999.999-99'">
           <label class="md-control-label">Cpf</label>
         </div>
 
-        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
-          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
-          <label class="md-control-label">Nascimento</label>
+        <div class="md-form-group md-label-static" ng-class="{ 'has-error': form_validation.nascimento.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="date" name="nascimento" spellcheck="false" ng-model="usuario.nascimento" required>
+          <label class="md-control-label">Data de Nascimento</label>
         </div>
 
-        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
-          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
-          <label class="md-control-label">Sexo</label>
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.sexo.$invalid && form_validation.submitted }">
+            <select class="custom-select" name="sexo" required ng-model="usuario.sexo">
+              <option value="">Selecione o sexo</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outros">Outro</option>
+            </select>
         </div>
 
-        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
-          <input class="md-form-control" type="text" name="name" spellcheck="false" ng-model="name" required>
+
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.celular.$invalid && form_validation.submitted }">
+          <input class="md-form-control" type="text" name="celular" spellcheck="false" ng-model="usuario.celular" required data-inputmask="'mask': '(99) 99999-9999'">
           <label class="md-control-label">Celular</label>
         </div>
 
-        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.name.$invalid && form_validation.submitted }">
-          <input id="form-control-telefone" class="md-form-control" type="text" data-inputmask="'mask': '(99) 99999-9999'">
-          
+        <div class="md-form-group md-label-floating" ng-class="{ 'has-error': form_validation.telefone.$invalid && form_validation.submitted }">
+          <input id="form-control-telefone" name="telefone" class="md-form-control" ng-model="usuario.telefone" type="text" data-inputmask="'mask': '(99) 99999-9999'">
           <label class="md-control-label">Telefone</label>
-          <small class="md-help-block">Não é obrigatório preencher um telefone fixo, o sistema aceita 2 celulares.</small>
         </div>
    
         
