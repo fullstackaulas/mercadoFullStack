@@ -6,19 +6,13 @@
     <title>Dashboard - ComercIO</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
     <script src="app/app.js"></script>
     <script src="app/routes.js"></script>
     <script src="app/controllers/controller.js"></script>
+
 </head>
 <body>
-    <header ng-include="'app/views/partials/header.html'"></header>
-    
-    <div class="container">
-        <nav ng-include="'app/views/partials/sidebar.html'"></nav>
-        <div ng-view></div>
-    </div>
-
-    <footer ng-include="'app/views/partials/footer.html'"></footer>
+    <div ui-view></div> <!-- Este é o ponto de entrada para os estados -->
 </body>
 </html>
