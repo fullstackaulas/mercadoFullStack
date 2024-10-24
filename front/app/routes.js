@@ -1,6 +1,6 @@
 angular.module('meuApp', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('main', {

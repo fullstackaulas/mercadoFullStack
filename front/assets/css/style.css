@@ -5,7 +5,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+body { 
+    overflow: hidden; /* Remove a barra de rolagem */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,6 +17,7 @@ body {
 .container {
     display: flex;
     flex: 1;
+    flex-direction: row;
 }
 
 /* Estilo do cabeçalho */
@@ -46,7 +48,7 @@ h1 {
 .logout-btn {
     padding: 8px 15px;
     background-color: #e74c3c;
-    border: none;
+    border-radius: 12px;
     color: white;
     cursor: pointer;
     font-size: 16px;
@@ -54,16 +56,19 @@ h1 {
 }
 
 .logout-btn:hover {
+   
     background-color: #c0392b;
 }
 
 /* Estilo do menu lateral */
 .sidebar {
-    width: 250px;
+    height: 100vh;
+    width: 150px;
     background-color: #34495e; /* Cor sólida */
     color: white;
     padding: 20px; /* Padding consistente */
     display: flex;
+    text-align: center;
     flex-direction: column;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -86,12 +91,15 @@ h1 {
 }
 
 .menu-item a {
+    
     text-decoration: none;
+    text-align: justify;
     color: #ecf0f1;
     font-size: 18px;
-    display: block;
+    display: inline-block;
     padding: 10px;
     transition: background-color 0.3s ease;
+    
 }
 
 .menu-item a:hover {
@@ -111,6 +119,8 @@ h1 {
 
 .submenu-item a:hover {
     color: #f39c12;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2); /* Sombra menor ao passar o mouse */
+  
 }
 
 /* Estilo do conteúdo principal */
@@ -119,10 +129,10 @@ h1 {
     padding: 20px;
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 20px 20px 130px;
     border: 1px solid #ddd; /* Borda para contorno */
+   
 }
-
 /* Estilo do rodapé */
 footer {
     background-color: #2c3e50; /* Cor sólida */
@@ -130,7 +140,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
     border-top: 2px solid #34495e; /* Linha para separação */
@@ -141,14 +151,16 @@ footer p {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 320px) {
     .sidebar {
-        width: 100%;
-        padding: 15px;
+        width: 50%;
+        display: flex;
+    
     }
     .container {
         flex-direction: column;
-    }
+       
+        
+} 
+
 }
-
-
