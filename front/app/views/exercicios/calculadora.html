@@ -1,0 +1,16 @@
+<div class="calculator">
+    <h2>Calculadora</h2>
+    <input type="number" ng-model="valores.primeiro" placeholder="Primeiro valor">
+    <br>
+    <input type="number" ng-model="valores.segundo" placeholder="Segundo valor">
+    <br>
+    <input type="button" value="Somar" ng-click="somar()">
+    <input type="button" value="Subtrair" ng-click="subtrair()">
+    <input type="button" value="Multiplicar" ng-click="multiplicar()">
+    <input type="button" value="Dividir" ng-click="dividir()">
+    <input type="button" value="Calcular tudo" ng-click="calcularTudo()">
+    <input type="button" value="Limpar" ng-click="limpar()" style="background-color:red">
+    <br>
+    <div class="result">Resultado: <span id="resultado">{{valores.resultado}}</span></div>
+
+</div>

@@ -1,6 +1,6 @@
 angular.module('meuApp', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    // $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('main', {
@@ -11,6 +11,16 @@ angular.module('meuApp', ['ui.router'])
             url: '/',
             templateUrl: 'app/views/home.html', // Template da dashboard
             controller: 'testeController' // Controller para a dashboard
+        })
+        .state('main.primeiroExercicio', {
+            url: '/exercicios/primeiro',
+            templateUrl: 'app/views/exercicios/primeiro.html',
+            controller: 'PrimeiroController'
+        })
+        .state('main.calculadoraExercicio', {
+            url: '/exercicios/calculadora',
+            templateUrl: 'app/views/exercicios/calculadora.html',
+            controller: 'CalculadoraController' 
         })
         // .state('login', {
         //     url: '/login',
