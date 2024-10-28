@@ -1,0 +1,25 @@
+Nome:
+<input type="text" ng-model="info.nome"><br>
+<br>
+Nascimento:
+<input type="date" ng-model="info.dataDeNascimento"><br>
+<br>
+<input type="button" value="Calcular idade" ng-click="calcularIdade()">
+<br><br>
+
+<!-- {{pessoas}} -->
+
+<table border="1">
+    <thead>
+        <th>Nome</th>
+        <th>Nascimento</th>
+        <th>Resultado</th>
+    </thead>
+    <tbody ng-repeat="item in pessoas">
+        <tr>
+            <td>{{item.nome}}</td>
+            <td>{{item.dataDeNascimento | date:'dd/MM/yyyy'}}</td>
+            <td>{{item.resultado}}</td>
+        </tr>
+    </tbody>
+</table>

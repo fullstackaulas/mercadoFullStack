@@ -1,6 +1,5 @@
 angular.module('meuApp', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider) {
-    // $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('main', {
@@ -22,6 +21,29 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exercicios/calculadora.html',
             controller: 'CalculadoraController' 
         })
+        .state('main.contador', {
+            url: '/exercicios/contador',
+            templateUrl: 'app/views/exercicios/contador.html',
+            controller: 'ContadorController' 
+        })
+        .state('main.calculadoraImc', {
+            url: '/exercicios/calculadoraImc',
+            templateUrl: 'app/views/exercicios/calculadoraImc.html',
+            controller: 'CalculadoraImcController' 
+        })
+        .state('main.calculadoraDeIdade', {
+            url: '/exercicios/calculadoraDeIdade',
+            templateUrl: 'app/views/exercicios/calculadoraDeIdade.html',
+            controller: 'CalculadoraDeIdadeController' 
+        })
+
+
+// contador de X até Y - Ok
+// Calculadora IMC - Ok
+// calculadora de idade
+// como identificar se uma palavra é um palindromo
+// como fazer para identificar se duas palavras sao anagrama
+
         // .state('login', {
         //     url: '/login',
         //     templateUrl: 'app/partials/login.html', // Apenas um conteúdo sem partials
@@ -32,4 +54,7 @@ angular.module('meuApp', ['ui.router'])
         //     templateUrl: 'app/partials/produtos.html', // Outra página que usa o layout com partials
         //     controller: 'ProdutosController'
         // });
+
+    $urlRouterProvider.otherwise('/');
+
 });
