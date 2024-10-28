@@ -40,21 +40,11 @@ angular.module('meuApp', ['ui.router'])
 
 // contador de X até Y - Ok
 // Calculadora IMC - Ok
-// calculadora de idade
+// calculadora de idade - ok
 // como identificar se uma palavra é um palindromo
 // como fazer para identificar se duas palavras sao anagrama
 
-        // .state('login', {
-        //     url: '/login',
-        //     templateUrl: 'app/partials/login.html', // Apenas um conteúdo sem partials
-        //     controller: 'LoginController' // Controller para o login
-        // })
-        // .state('main.produtos', {
-        //     url: '/produtos',
-        //     templateUrl: 'app/partials/produtos.html', // Outra página que usa o layout com partials
-        //     controller: 'ProdutosController'
-        // });
-
+   
     $urlRouterProvider.otherwise('/');
 
 });
