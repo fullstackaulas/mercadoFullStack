@@ -36,6 +36,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exercicios/calculadoraDeIdade.html',
             controller: 'CalculadoraDeIdadeController' 
         })
+        .state('main.palindromo', {
+            url: '/exercicios/palindromo',
+            templateUrl: 'app/views/exercicios/palindromo.html',
+            controller: 'palindromoController' 
+        })
 
 
 // contador de X até Y - Ok
