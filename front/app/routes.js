@@ -39,7 +39,7 @@ angular.module('meuApp', ['ui.router'])
         .state('main.palindromo', {
             url: '/exercicios/palindromo',
             templateUrl: 'app/views/exercicios/palindromo.html',
-            controller: 'palindromoController' 
+            controller: 'PalindromoController' 
         })
 
 

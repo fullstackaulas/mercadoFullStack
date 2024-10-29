@@ -1,5 +1,5 @@
 angular.module("meuApp")
-.controller("palindromoController", function($scope) {
+.controller("PalindromoController", function($scope) {
 $scope.resultado = "";
 $scope.palavra = {
     original: '',
@@ -18,3 +18,10 @@ $scope.palavra.invertida =  $scope.palavra.original.split('').reverse().join('')
     }
 }    
 });
+
+// $scope.palavra.invertida = '';
+// $scope.palavra.original = 'macaco';
+// .split('')m - a - c - a- c - o
+// .reverse()o - c - a - c - a - m
+// .join()  ocacam
+// $scope.palavra.invertida = 'ocacam';
