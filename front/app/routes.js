@@ -41,12 +41,27 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exercicios/palindromo.html',
             controller: 'PalindromoController' 
         })
+        .state('main.conversorDeUnidades', {
+            url:'/exercicios/conversorDeUnidades',
+            templateUrl: 'app/views/exercicios/conversorDeUnidades.html',
+            controller: 'ConversorDeUnidadesController'
+        })
+        .state('main.jogoDeAdivinharONumero', {
+            url:'/exercicios/jogoDeAdivinharONumero',
+            templateUrl: 'app/views/exercicios/jogoDeAdivinharONumero.html',
+            controller: 'JogoDeAdivinharONumeroController'
+        })
 
 
 // contador de X até Y - Ok
 // Calculadora IMC - Ok
 // calculadora de idade - ok
-// como identificar se uma palavra é um palindromo
+// como identificar se uma palavra é um palindromo - ok
+//conversor de unidades
+//conversor de moedas de acordo com o valor da moeda
+//todo list
+
+
 // como fazer para identificar se duas palavras sao anagrama
 
    
