@@ -30,11 +30,30 @@ angular.module("meuApp")
             tentativa: 0
         }
 
-
+        $scope.iniciarJogo = function (){
+            intervalo = $scope.config.maximo - $scope.config.minimo
+            if (intervalo < $scope.config.intervalo){
+                $scope.msgDeErro = `O intervalo precisa ser maior que ${$scope.config.intervalo}`
+            }
+            else{
+                $scope.config.jogoIniciou = 1;
+                $scope.jogo.numeroAleatorio = gerarNumeroAleatorio($scope.config.minimo, $scope.config.maximo);
+            }
+        }
+        
         gerarNumeroAleatorio = function (min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
         }
 
+        $scope.adivinhar = function(){
+            if($scope.jogo.tentativa == $scope.jogo.numeroAleatorio){
+                $scope.msgDeErroDoJogo = "Você Acertou :)"
+            }
+            else{
+                $scope.msgDeErroDoJogo = "Você Errou :("
+            }
+
+        }
 
 
     })

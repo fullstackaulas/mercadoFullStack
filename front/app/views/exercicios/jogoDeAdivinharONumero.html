@@ -1,0 +1,28 @@
+<div>
+<h1>Configure o Jogo</h1>
+Mínimo:<br>
+<input type="number" ng-model="config.minimo"><br>
+Máximo:<br>
+<input type="number" ng-model="config.maximo"><br>
+
+<input type="button" value="Adivinhar" ng-click="iniciarJogo()">
+</div>
+<br>
+<br>
+<br>
+{{config}}
+{{jogo}}
+{{msgDeErro}}
+<br>
+<br>
+<br>
+<div>
+<h1>Jogo De Adivinhar</h1>
+<input type="number" ng-model="jogo.tentativa">
+<br>
+<input type="button" value="adivinhar" ng-click="adivinhar()">
+<br>
+{{msgDeErroDoJogo}}
+
+
+</div>
