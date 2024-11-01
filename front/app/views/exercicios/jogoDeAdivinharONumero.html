@@ -1,0 +1,30 @@
+<div ng-show="config.jogoIniciou == 0">
+    <h1>Configure o jogo:</h1>
+    Mínimo:<br>
+    <input type="number" ng-model="config.minimo"><br>
+    Máximo:<br>
+    <input type="number" ng-model="config.maximo"><br><br>
+    {{msgDeErro}}
+    <br><br>
+    <input type="button" value="Iniciar" ng-click="iniciarJogo()">
+</div>
+
+<div ng-show="config.jogoIniciou == 1">
+    <h1>Jogo começou:</h1>
+    Adivinhe o número:<br>
+    <input type="number" ng-model="jogo.tentativa"><br>
+    <input type="button" value="Iniciar" ng-click="verificarSeAcertou()" ng-show="config.jogoFinalizou == 0">
+    <br><br>
+    Voce tentou {{jogo.qtdTentativa}}<br>
+    {{msgDeErroDoJogo}}
+    <br>
+    <br>    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="button" style="background-color: red;" value="Resetar" ng-click="resetar()">
+
+
+</div>
