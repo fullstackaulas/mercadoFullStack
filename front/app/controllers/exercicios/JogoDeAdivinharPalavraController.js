@@ -35,18 +35,36 @@ angular.module("meuApp")
         $palavraAleatoria = '';
 
         $scope.iniciarJogo = function () {
-          
+            $scope.jogo.jogoIniciado = 1;
+            $palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
 
+            console.log($palavraAleatoria)
 
+            //iniciar jogo
         }
 
         $scope.reiniciarJogo = function(){
 
-
+        $scope.jogo = {
+            palavraTentada: '',
+            qtdTentativa: 0,
+            qtdLetrasIguais: 0,
+            jogoIniciado: 0,
+            msg: ''
+        }
         }
 
         $scope.testarPalavra = function () {
-         
+            $scope.jogo.qtdTentativa++;
+            $scope.jogo.qtdLetrasIguais = calcularLetrasIguais();
+
+            if ($palavraAleatoria == $scope.jogo.palavraTentada) {
+                $scope.jogo.msg = 'Você acertou!!!'
+                $scope.jogo.jogoIniciado = 2;
+            }
+            else {
+                $scope.jogo.msg = "Poxa, ainda não acertou..."
+            }
         }
 
         calcularLetrasIguais = function () {

@@ -1,4 +1,4 @@
-<div ng-show="jogo.jogoIniciado == 'zero'">
+<div ng-show="jogo.jogoIniciado == 0">
 <h1>Deseja iniciar o jogo de adivinhação? Tema: frutas!</h1>
 <input type="button" value="Iniciar" ng-click="">
 </div>
@@ -6,16 +6,16 @@
 <div ng-show="jogo.jogoIniciado >= 1">
 <h1>Adivinhe a palavra:</h1>
 <input type="text" ng-model="jogo.palavraTentada">
-<input type="button" value="Verificar" ng-click="" ng-show="jogo.jogoIniciado == 'um'">
+<input type="button" value="Verificar" ng-click="" ng-show="jogo.jogoIniciado == 1">
 <br><br>
-<input type="button" style="background-color: red;" value="Reiniciar o jogo" ng-click="" ng-show="jogo.jogoIniciado == 'dois'">
+<input type="button" style="background-color: red;" value="Reiniciar o jogo" ng-click="" ng-show="jogo.jogoIniciado == 2">
 
 <div>
 <br>
-Msg: {{msg}}
+Msg: {{jogo.msg}}
 <br>
-Tentativas: {{qtdTentativa}}
+Tentativas: {{jogo.qtdTentativa}}
 <br>
-Você acertou {{qtdLetrasIguais}} letras
+Você acertou {{jogo.qtdLetrasIguais}} letras
 </div>
 </div>
