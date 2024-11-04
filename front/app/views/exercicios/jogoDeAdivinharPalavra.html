@@ -1,0 +1,21 @@
+<div ng-show="jogo.jogoIniciado == 0">
+<h1>Deseja iniciar o jogo de adivinhação? Tema: frutas!</h1>
+<input type="button" value="Iniciar" ng-click="iniciarJogo()">
+</div>
+
+<div ng-show="jogo.jogoIniciado >= 1">
+<h1>Adivinhe a palavra:</h1>
+<input type="text" ng-model="jogo.palavraTentada">
+<input type="button" value="Verificar" ng-click="testarPalavra()" ng-show="jogo.jogoIniciado == 1">
+<br><br>
+<input type="button" style="background-color: red;" value="Reiniciar o jogo" ng-click="reiniciarJogo()" ng-show="jogo.jogoIniciado == 2">
+
+<div>
+<br>
+Msg: {{jogo.msg}}
+<br>
+Tentativas: {{jogo.qtdTentativa}}
+<br>
+Você acertou {{jogo.qtdLetrasIguais}} letras
+</div>
+</div>

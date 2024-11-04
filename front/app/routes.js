@@ -51,6 +51,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exercicios/jogoDeAdivinharONumero.html',
             controller: 'JogoDeAdivinharONumeroController'
         })
+        .state('main.jogoDeAdivinharPalavra', {
+            url:'/exercicios/jogoDeAdivinharPalavra',
+            templateUrl: 'app/views/exercicios/jogoDeAdivinharPalavra.html',
+            controller: 'JogoDeAdivinharPalavraController'
+        })
 
 
 // contador de X até Y - Ok
