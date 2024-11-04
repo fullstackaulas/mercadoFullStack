@@ -53,8 +53,8 @@ angular.module('meuApp', ['ui.router'])
         })
         .state('main.jogoDeAdivinharPalavra', {
             url:'/exercicios/jogoDeAdivinharPalavra',
-            templateUrl: 'app/views/exercicios/jogoDeAdivinharPalavra.html',
-            controller: 'JogoDeAdivinharPalavraController'
+            templateUrl: 'app/views/exercicios/jogoDeAdivinharPalavra.tml',
+            controller: 'JogoDeAdivinharppalavraController'
         })
 
 
