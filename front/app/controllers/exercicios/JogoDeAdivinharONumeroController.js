@@ -65,6 +65,15 @@ angular.module("meuApp")
             return Math.floor(Math.random() * (max - min)) + min;
         }
 
+        $scope.adivinhar = function(){
+            if($scope.jogo.tentativa == $scope.jogo.numeroAleatorio){
+                $scope.msgDeErroDoJogo = "Você Acertou :)"
+            }
+            else{
+                $scope.msgDeErroDoJogo = "Você Errou :("
+            }
+
+        }
 
         $scope.verificarSeAcertou = function () {
             if ($scope.jogo.numeroAleatorio == $scope.jogo.tentativa) {
