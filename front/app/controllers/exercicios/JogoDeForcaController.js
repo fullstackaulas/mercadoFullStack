@@ -177,4 +177,7 @@ angular.module("meuApp")
 3) AO CLICAR NO BOTAO, DAR FOCO NA CAIXA DE TEXTO JA SELECIONANDO A LETRA PRO USUARIO SÓ DIGITAR (DICA: .FOCUS .setSelectionRange)
 4) habilitar o reiniciar!!!
 5) retirar todos console.log()!
+
+Estudar: tentar refazer o jogo da forca
+entender melhor o indexof!!!
 */
