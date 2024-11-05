@@ -43,22 +43,17 @@ angular.module("meuApp")
 
                 $scope.config.jogoIniciou = 1;
                 $scope.jogo.numeroAleatorio = gerarNumeroAleatorio($scope.config.minimo, $scope.config.maximo);
-
-
             }
-
-
-
         }
 
         verificarIntervalo = function () {
             intervalo = $scope.config.maximo - $scope.config.minimo;
             if (intervalo < $scope.config.intervalo) {
+                
                 return false;
             }
 
             return true;
-
         }
 
         gerarNumeroAleatorio = function (min, max) {
