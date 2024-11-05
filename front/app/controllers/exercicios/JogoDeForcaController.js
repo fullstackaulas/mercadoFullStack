@@ -1,5 +1,5 @@
 angular.module("meuApp")
-    .controller("JogoDeAdivinharPalavraController", function ($scope) {
+    .controller("JogoDeForcaController", function ($scope) {
 
         /*
         Serão duas divs, uma para iniciar o jogo e outra para tentar adivinhar a palavra.
@@ -10,9 +10,16 @@ angular.module("meuApp")
         */
 
 
+        $scope.forca = {
+            linhas: '',
+            letrasAcertadas: [],
+            letrasErradas: [],
+            erros: 0
+        }
+
 
         $scope.jogo = {
-            palavraTentada: '',
+            letraTentada: '',
             qtdTentativa: 0,
             qtdLetrasIguais: 0,
             jogoIniciado: 0,
@@ -50,7 +57,7 @@ angular.module("meuApp")
         ];
 
 
-        $scope.palavraAleatoria  = '';
+        $scope.palavraAleatoria = '';
 
         $scope.iniciarJogo = function () {
             $scope.jogo.jogoIniciado = 1;
@@ -68,9 +75,11 @@ angular.module("meuApp")
             }
 
 
-            $scope.palavraAleatoria  = palavras[Math.floor(Math.random() * palavras.length)];
+            $scope.palavraAleatoria = palavras[Math.floor(Math.random() * palavras.length)];
 
-            console.log($scope.palavraAleatoria )
+            $scope.forca.linhas = gerarLinhas();
+
+            console.log($scope.palavraAleatoria)
 
             //iniciar jogo
         }
@@ -78,7 +87,7 @@ angular.module("meuApp")
         $scope.reiniciarJogo = function () {
 
             $scope.jogo = {
-                palavraTentada: '',
+                letraTentada: '',
                 qtdTentativa: 0,
                 qtdLetrasIguais: 0,
                 jogoIniciado: 0,
@@ -87,21 +96,31 @@ angular.module("meuApp")
         }
 
         $scope.testarPalavra = function () {
-            $scope.jogo.qtdTentativa++;
-            $scope.jogo.qtdLetrasIguais = calcularLetrasIguais();
 
-            if ($scope.palavraAleatoria  == $scope.jogo.palavraTentada) {
-                $scope.jogo.msg = 'Você acertou!!!'
-                $scope.jogo.jogoIniciado = 2;
+            letraTentada = $scope.jogo.letraTentada;
+            palavra = $scope.palavraAleatoria;
+
+            if ($scope.forca.letrasAcertadas.indexOf(letraTentada) !== -1 || $scope.forca.letrasErradas.indexOf(letraTentada) !== -1) {
+                console.log('Essa letra já foi tentada.');
+                return;
             }
-            else {
-                $scope.jogo.msg = "Poxa, ainda não acertou..."
+
+            if (palavra.indexOf(letraTentada) !== -1) {
+                $scope.forca.letrasAcertadas.push(letraTentada);
+                console.log('Letra acertada: ' + letraTentada);
+            } else {
+                $scope.forca.letrasErradas.push(letraTentada);
+                $scope.forca.erros++;
+                console.log('Letra errada: ' + letraTentada);
             }
+
+            $scope.forca.linhas = gerarLinhas();
+
         }
 
         calcularLetrasIguais = function () {
-            palavra1 = $scope.palavraAleatoria ;
-            palavra2 = $scope.jogo.palavraTentada;
+            palavra1 = $scope.palavraAleatoria;
+            palavra2 = $scope.jogo.letraTentada;
 
 
 
@@ -117,7 +136,45 @@ angular.module("meuApp")
             return contador;
         }
 
+        gerarLinhas = function () {
+
+
+            linhas = '';
+            console.log(linhas);
+
+            for (i = 0; i < $scope.palavraAleatoria.length; i++) {
+                letra = $scope.palavraAleatoria[i];
+                console.log(letra);
+                console.log($scope.forca.letrasAcertadas);
+                if ($scope.forca.letrasAcertadas.indexOf(letra) !== -1) {
+                    console.log('entrou no if que existe');
+                    linhas = linhas + letra;
+                } else {
+                    linhas = linhas + '_';
+                    console.log('entrou no if que NAO existe');
+
+
+                }
+
+            }
+            console.log(linhas);
+
+            return linhas;
+
+
+        }
+
 
 
     })
 
+
+
+/*
+ 
+1) LIMITAR OS ERROS E INFORMAR QUE PERDEU, DIZENDO: VC PERDEU! A PALAVRA ERA {{PALAVRA}}!
+2) INFORMAR QUE GANHOU!!!
+3) AO CLICAR NO BOTAO, DAR FOCO NA CAIXA DE TEXTO JA SELECIONANDO A LETRA PRO USUARIO SÓ DIGITAR (DICA: .FOCUS .setSelectionRange)
+4) habilitar o reiniciar!!!
+5) retirar todos console.log()!
+*/

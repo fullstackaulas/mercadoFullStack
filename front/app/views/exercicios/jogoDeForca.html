@@ -1,0 +1,177 @@
+<div ng-show="jogo.jogoIniciado == 0">
+    <h1>Deseja iniciar o jogo de adivinhação?</h1>
+    <select ng-model="jogo.tema">
+        <option value="frutas">Frutas</option>
+        <option value="carros">Carros</option>
+        <option value="cores">Cores</option>
+        <option value="generos">Generos de filmes</option>
+        <option value="outros">Outros</option>
+
+
+    </select>
+    <div ng-show="jogo.tema == 'outros'">
+        <br>
+        <h4>Separe as palavras por ponto e virgula ;</h4>
+        <input type="text" ng-model="jogo.palavraOutros">
+        <br>
+    </div>
+    <input type="button" value="Iniciar" ng-click="iniciarJogo()">
+</div>
+
+<div ng-show="jogo.jogoIniciado >= 1">
+    <h1>Adivinhe a palavra:</h1><br>
+<p>Tema: {{jogo.tema}}</p>
+<p>Tamanho da palavra: {{palavraAleatoria.length}}</p>
+
+
+    <input type="text" ng-model="jogo.letraTentada" maxlength='1'>
+    <input type="button" value="Verificar" ng-click="testarPalavra()" ng-show="jogo.jogoIniciado == 1">
+    <br><br>
+    <input type="button" style="background-color: red;" value="Reiniciar o jogo" ng-click="reiniciarJogo()"
+        ng-show="jogo.jogoIniciado == 2">
+
+    <div ng-show="false">
+        <br>
+        Msg: {{jogo.msg}}
+        <br>
+        Tentativas: {{jogo.qtdTentativa}}
+        <br>
+        Você acertou {{jogo.qtdLetrasIguais}} letras
+    <br><br><br><br><br>
+
+    </div>
+</div>
+<p style="letter-spacing: 5px">
+
+    {{forca.linhas}}
+
+
+</p>
+
+<div class="forca">
+    
+    <div class="forca-boneco">
+        <div class="forca-cabeca" ng-show="forca.erros>=1"></div>
+        <div class="forca-corpo" ng-show="forca.erros>=2"></div>
+        <div class="forca-braco-esq" ng-show="forca.erros>=3"></div>
+        <div class="forca-braco-dir" ng-show="forca.erros>=4"></div>
+        <div class="forca-perna-esq" ng-show="forca.erros>=5"></div>
+        <div class="forca-perna-dir" ng-show="forca.erros>=6"></div>
+    </div>
+</div>
+<style>
+/* Classe do jogo de forca */
+.forca {
+    position: relative !important;
+    width: 200px !important;
+    height: 300px !important;
+    margin-top: 50px !important;
+    /* border-left: 2px solid black !important;// */
+    
+}
+
+/* Estrutura da forca */
+.forca-galhos {
+    position: absolute !important;
+    top: 10px !important;
+    left: 50px !important;
+}
+
+.forca-base {
+    width: 50px !important;
+    height: 10px !important;
+    background-color: black !important;
+    position: absolute !important;
+    bottom: 0 !important;
+}
+
+.forca-posto {
+    width: 2px !important;
+    height: 200px !important;
+    background-color: black !important;
+    position: absolute !important;
+    left: 50px !important;
+    bottom: 10px !important;
+}
+
+.forca-barral {
+    width: 50px !important;
+    height: 2px !important;
+    background-color: black !important;
+    position: absolute !important;
+    left: 50px !important;
+    top: 0 !important;
+}
+
+.forca-corda {
+    width: 2px !important;
+    height: 50px !important;
+    background-color: black !important;
+    position: absolute !important;
+    left: 75px !important;
+    top: 0 !important;
+}
+
+/* Estilos do boneco com maior especificidade e !important em tudo */
+.forca-boneco .forca-cabeca {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background-color: #f1c27d !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    visibility: block !important; /* Aparece com JS */
+}
+
+.forca-boneco .forca-corpo {
+    width: 10px !important;
+    height: 50px !important;
+    background-color: black !important;
+    position: absolute !important;
+    top: 50px !important;
+    left: 15px !important;
+    visibility: block !important; /* Aparece com JS */
+}
+
+.forca-boneco .forca-braco-esq,
+.forca-boneco .forca-braco-dir {
+    width: 10px !important;
+    height: 50px !important;
+    background-color: black !important;
+    position: absolute !important;
+    top: 50px !important;
+    visibility: block !important; /* Aparece com JS */
+}
+
+.forca-boneco .forca-braco-esq {
+    transform: rotate(-30deg) !important;
+    left: -10px !important;
+}
+
+.forca-boneco .forca-braco-dir {
+    transform: rotate(30deg) !important;
+    left: 30px !important;
+}
+
+.forca-boneco .forca-perna-esq,
+.forca-boneco .forca-perna-dir {
+    width: 10px !important;
+    height: 50px !important;
+    background-color: black !important;
+    position: absolute !important;
+    top: 100px !important;
+    visibility: block !important; /* Aparece com JS */
+}
+
+.forca-boneco .forca-perna-esq {
+    transform: rotate(30deg) !important;
+    left: -10px !important;
+}
+
+.forca-boneco .forca-perna-dir {
+    transform: rotate(-30deg) !important;
+    left: 30px !important;
+}
+
+</style>
