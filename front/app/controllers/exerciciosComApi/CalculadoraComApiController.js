@@ -10,11 +10,37 @@ angular.module('meuApp')
 
 
         $scope.somar = function () {
+            calcular('+')
+        };
+
+        $scope.subtrair = function () {
+            calcular('-');
+        };
+
+        $scope.multiplicar = function () {
+            calcular('*');
+        };
+
+        $scope.dividir = function () {
+            calcular('/');
+        };
+
+        $scope.limpar = function () {
+            $scope.valores = {
+                primeiro: 0,
+                segundo: 0,
+                resultado: 0
+            };
+        }
+
+
+
+        function calcular($operacao){
             $url = 'http://localhost:8000/api/calculadora/calcular';
             $dados = {
                 valorUm: $scope.valores.primeiro,
                 valorDois: $scope.valores.segundo,
-                operacao: '+',
+                operacao: $operacao,
             };
 
             $http.post($url, $dados).then(function (response) {
@@ -29,38 +55,7 @@ angular.module('meuApp')
                 console.log(error);
                 $scope.valores.resultado = "Um erro ocorreu (Não tratado)";
             })
-
-
-
-        };
-
-        $scope.subtrair = function () {
-
-
-
-        };
-
-        $scope.multiplicar = function () {
-
-
-
-        };
-
-        $scope.dividir = function () {
-
-
-           
-
-        };
-
-        $scope.limpar = function () {
-            $scope.valores = {
-                primeiro: 0,
-                segundo: 0,
-                resultado: 0
-            };
         }
-
 
 
 

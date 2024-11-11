@@ -1,0 +1,158 @@
+<div class="agenda">
+    <h2>Agenda de Contatos</h2>
+
+    <!-- Label Dinâmico -->
+    <div class="status">
+        <h3 id="statusLabel">Novo contato</h3>
+    </div>
+
+    <!-- Formulário de Adicionar/Editar Contato -->
+    <div class="input-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" placeholder="Digite o nome">
+    </div>
+
+    <div class="input-group">
+        <label for="phone">Telefone:</label>
+        <input type="text" id="phone" placeholder="Digite o telefone">
+    </div>
+
+    <div class="input-group buttons">
+        <input type="button" value="Adicionar">
+
+        <br>
+        <br>
+        <input type="button" value="Cancelar" id="btnCancelar">
+    </div>
+
+    <!-- Lista de Contatos -->
+    <div class="contact-list">
+        <h3>Contatos</h3>
+        <table id="contactTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Contatos serão adicionados aqui -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<style>
+    .agenda {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agenda h2 {
+    text-align: center;
+    color: #333;
+}
+
+.status h3 {
+    color: #007bff;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.input-group .buttons {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    justify-content: space-between;
+}
+
+.input-group input[type="button"] {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    flex: 1;
+}
+
+.input-group input[type="button"]:hover {
+    background-color: #218838;
+}
+
+.input-group input[type="button"]:nth-child(2),
+#btnCancelar {
+    background-color: #dc3545;
+    flex: 1;
+}
+
+.input-group input[type="button"]:nth-child(2):hover,
+#btnCancelar {
+    background-color: #c82333;
+}
+
+.contact-list {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #ffc107;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+</style>

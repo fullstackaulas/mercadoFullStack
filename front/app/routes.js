@@ -66,6 +66,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exerciciosComApi/calculadoraComApi.html',
             controller: 'CalculadoraComApiController' 
         })
+        .state('main.AgendaController', {
+            url: '/exercicios/AgendaController',
+            templateUrl: 'app/views/exerciciosComApi/agenda.html',
+            controller: 'AgendaController' 
+        })
 
 
 // contador de X até Y - Ok
