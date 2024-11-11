@@ -13,15 +13,28 @@
     </div>
 
     <div class="input-group">
-        <label for="phone">Telefone:</label>
-        <input type="text" id="phone" placeholder="Digite o telefone">
+        <label for="phone">Telefone Fixo:</label>
+        <input type="text" id="phone" placeholder="Digite o telefone fixo">
+    </div>
+
+    <div class="input-group">
+        <label for="mobile">Telefone Celular:</label>
+        <input type="text" id="mobile" placeholder="Digite o telefone celular">
+    </div>
+
+    <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Digite o email">
+    </div>
+
+    <div class="input-group">
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" placeholder="Digite o endereço">
     </div>
 
     <div class="input-group buttons">
         <input type="button" value="Adicionar ou Editar(caso consulte)">
-
-        <br>
-        <br>
+        <br><br>
         <input type="button" value="Cancelar" id="btnCancelar">
     </div>
 
@@ -32,7 +45,10 @@
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Telefone</th>
+                    <th>Telefone Fixo</th>
+                    <th>Telefone Celular</th>
+                    <th>Email</th>
+                    <th>Endereço</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -42,6 +58,7 @@
         </table>
     </div>
 </div>
+
 <style>
     .agenda {
     font-family: Arial, sans-serif;
@@ -154,5 +171,4 @@ button:hover {
 button:nth-child(2) {
     background-color: #dc3545;
 }
-
 </style>
