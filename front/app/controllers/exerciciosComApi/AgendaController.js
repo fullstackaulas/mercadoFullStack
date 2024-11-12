@@ -26,10 +26,15 @@ angular.module('meuApp')
 
         console.log($scope.contatos);
 
-
-
         listar = function () {
-          
+          $url = 'http://localhost:8000/api/agenda/listar';
+          $http.get($url).then(function(response){
+            console.log(response);
+            $scope.contatos = response.data;
+
+          },function(error){
+            console.log(error);
+          });
 
         }
 
