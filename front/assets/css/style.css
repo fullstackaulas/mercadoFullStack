@@ -5,8 +5,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body { 
-    overflow: hidden; /* Remove a barra de rolagem */
+body {
+    /* Remove a barra de rolagem */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -25,14 +25,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2c3e50; /* Cor sólida */
-    padding: 15px 20px; /* Padding consistente */
+    background-color: #2c3e50;
+    /* Cor sólida */
+    padding: 15px 20px;
+    /* Padding consistente */
     color: white;
-    border-bottom: 2px solid #34495e; /* Linha para separação */
+    border-bottom: 2px solid #34495e;
+    /* Linha para separação */
 }
 
 h1 {
-    font-size: 24px; /* Ajuste no tamanho da fonte */
+    font-size: 24px;
+    /* Ajuste no tamanho da fonte */
 }
 
 .user-info {
@@ -56,7 +60,7 @@ h1 {
 }
 
 .logout-btn:hover {
-   
+
     background-color: #c0392b;
 }
 
@@ -64,9 +68,11 @@ h1 {
 .sidebar {
     height: 100vh;
     width: 150px;
-    background-color: #34495e; /* Cor sólida */
+    background-color: #34495e;
+    /* Cor sólida */
     color: white;
-    padding: 20px; /* Padding consistente */
+    padding: 20px;
+    /* Padding consistente */
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -78,20 +84,23 @@ h1 {
     font-weight: bold;
     text-align: center;
     color: #f39c12;
-    margin-bottom: 30px; /* Ajuste na margem */
+    margin-bottom: 30px;
+    /* Ajuste na margem */
 }
 
 .menu {
     list-style: none;
-    padding: 0; /* Remove padding padrão */
+    padding: 0;
+    /* Remove padding padrão */
 }
 
 .menu-item {
-    margin: 10px 0; /* Menos espaço entre itens */
+    margin: 10px 0;
+    /* Menos espaço entre itens */
 }
 
 .menu-item a {
-    
+
     text-decoration: none;
     text-align: justify;
     color: #ecf0f1;
@@ -99,11 +108,12 @@ h1 {
     display: inline-block;
     padding: 10px;
     transition: background-color 0.3s ease;
-    
+
 }
 
 .menu-item a:hover {
-    background-color: #2c3e50; /* Muda a cor ao passar o mouse */
+    background-color: #2c3e50;
+    /* Muda a cor ao passar o mouse */
 }
 
 .submenu {
@@ -119,8 +129,9 @@ h1 {
 
 .submenu-item a:hover {
     color: #f39c12;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2); /* Sombra menor ao passar o mouse */
-  
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+    /* Sombra menor ao passar o mouse */
+
 }
 
 /* Estilo do conteúdo principal */
@@ -130,12 +141,15 @@ h1 {
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px 20px 130px;
-    border: 1px solid #ddd; /* Borda para contorno */
-   
+    border: 1px solid #ddd;
+    /* Borda para contorno */
+
 }
+
 /* Estilo do rodapé */
 footer {
-    background-color: #2c3e50; /* Cor sólida */
+    background-color: #2c3e50;
+    /* Cor sólida */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -143,7 +157,8 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    border-top: 2px solid #34495e; /* Linha para separação */
+    border-top: 2px solid #34495e;
+    /* Linha para separação */
 }
 
 footer p {
@@ -155,26 +170,17 @@ footer p {
     .sidebar {
         width: 50%;
         display: flex;
-    
+
     }
+
     .container {
         flex-direction: column;
-       
-        
-} 
+
+
+    }
 
 }
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-}
 
 .calculator {
     background: white;
@@ -213,4 +219,3 @@ input[type="button"]:hover {
     font-size: 18px;
     font-weight: bold;
 }
-
