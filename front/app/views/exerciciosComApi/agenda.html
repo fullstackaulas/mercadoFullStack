@@ -9,31 +9,31 @@
     <!-- Formulário de Adicionar/Editar Contato -->
     <div class="input-group">
         <label for="name">Nome:</label>
-        <input type="text" id="name" placeholder="Digite o nome">
+        <input type="text" id="name" placeholder="Digite o nome" ng-model="dados.nome">
     </div>
 
     <div class="input-group">
         <label for="phone">Telefone Fixo:</label>
-        <input type="text" id="phone" placeholder="Digite o telefone fixo">
+        <input type="text" id="phone" placeholder="Digite o telefone fixo" ng-model="dados.telefoneFixo">
     </div>
 
     <div class="input-group">
         <label for="mobile">Telefone Celular:</label>
-        <input type="text" id="mobile" placeholder="Digite o telefone celular">
+        <input type="text" id="mobile" placeholder="Digite o telefone celular" ng-model="dados.telefoneCelular">
     </div>
 
     <div class="input-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Digite o email">
+        <input type="email" id="email" placeholder="Digite o email" ng-model="dados.email">
     </div>
 
     <div class="input-group">
         <label for="address">Endereço:</label>
-        <input type="text" id="address" placeholder="Digite o endereço">
+        <input type="text" id="address" placeholder="Digite o endereço" ng-model="dados.endereco">
     </div>
 
     <div class="input-group buttons">
-        <input type="button" value="Adicionar ou Editar(caso consulte)">
+        <input type="button" value="Adicionar ou Editar(caso consulte)" ng-click="salvarInfo()">
         <br><br>
         <input type="button" value="Cancelar" id="btnCancelar">
     </div>
@@ -59,7 +59,9 @@
                     <td>{{item.telefoneCelular}}</td>
                     <td>{{item.email}}</td>
                     <td>{{item.endereco}}</td>
-                    <td>....</td>
+                    <td> <input type="button" value="Editar">
+                    <input type="button" value="Excluir"> 
+                </td>
             </tbody>
         </table>
     </div>

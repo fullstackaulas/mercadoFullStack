@@ -40,6 +40,27 @@ angular.module('meuApp')
 
         listar();
 
+        $scope.dados = {
+
+        nome: '',
+        telefoneFixo:'',
+        telefoneCelular:'',
+        email:'',
+        endereco:''
+    };
+
+    $scope.salvarInfo = function(){
+        $url = 'http://localhost:8000/api/agenda/salvar';
+        $http.post($url,$scope.dados).then(function(response){
+            console.log(response);
+
+        }, function(error){
+            console.log(error);
+        });
+    }
+
+
+
         /*
         1- fazer a consulta carregar logo de cara (cria uma funcao e chama ela direto)
         2- a consulta funcionando, criaremos 2 botoes depois Editar e excluir (sem funcionar ainda)
