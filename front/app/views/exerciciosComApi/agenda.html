@@ -52,8 +52,14 @@
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- Contatos serão adicionados aqui -->
+            <tbody ng-repeat="item in contatos">
+                <tr>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.telefoneFixo}}</td>
+                    <td>{{item.telefoneCelular}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.endereco}}</td>
+                    <td>....</td>
             </tbody>
         </table>
     </div>
