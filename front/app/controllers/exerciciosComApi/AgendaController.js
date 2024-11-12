@@ -62,9 +62,9 @@ angular.module('meuApp')
 
 
         /*
-        1- fazer a consulta carregar logo de cara (cria uma funcao e chama ela direto)
-        2- a consulta funcionando, criaremos 2 botoes depois Editar e excluir (sem funcionar ainda)
-        3- Apos fazer o 1 e 2, o botão Adicionar / editar deve criar um novo dado
+        1- fazer a consulta carregar logo de cara (cria uma funcao e chama ela direto) - OK
+        2- a consulta funcionando, criaremos 2 botoes depois Editar e excluir (sem funcionar ainda) - OK
+        3- Apos fazer o 1 e 2, o botão Adicionar / editar deve criar um novo dado - OK
         4- faremos o excluir funcionar
         5- o editar deve carregar as informaçoes nos campos de texto, mudar o texto "Novo" para "Editando id #id"
         6- o botao adicionar deve mudar para editar
