@@ -8,8 +8,7 @@ angular.module('meuApp')
     //     icon: 'success',
     //     confirmButtonText: 'Ok'
     // });
-        
-
+    
         $scope.contatos = [];
 
         console.log($scope.contatos);
@@ -45,8 +44,19 @@ angular.module('meuApp')
         }, function(error){
             console.log(error);
         });
-    }
+    };
 
+    $scope.delete = function(id) {
+      $url = 'http://localhost:8000/api/agenda/deletar/'+ id;
+      $http.delete($url,id).then(function(response){
+        console.log(response);
+      
+      },function(error){
+          console.log(error);
+      });
+    };
+
+    
 
 
         /*

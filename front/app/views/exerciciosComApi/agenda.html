@@ -60,7 +60,7 @@
                     <td>{{item.email}}</td>
                     <td>{{item.endereco}}</td>
                     <td> <input type="button" value="Editar">
-                    <input type="button" value="Excluir"> 
+                    <input type="button" value="Excluir" ng-click="$parent.delete(item.id)"> 
                 </td>
             </tbody>
         </table>
