@@ -8,27 +8,7 @@ angular.module('meuApp')
     //     icon: 'success',
     //     confirmButtonText: 'Ok'
     // });
-        // <th>Nome</th>
-        // <th>Telefone Fixo</th>
-        // <th>Telefone Celular</th>
-        // <th>Email</th>
-        // <th>Endereço</th>
-        // <th>Ações</th>
-
-        // $scope.contatos = [{
-        //     nome: 'Matheus',
-        //     email: 'matheus.rubens@bol.com.br',
-        //     telefoneFixo: '1124242424',
-        //     telefoneCelular: '11980802497',
-        //     endereco: 'Rua palindromo'
-        // },
-        // {
-        //     nome: 'Matheus 2',
-        //     email: 'matheus2.rubens@bol.com.br',
-        //     telefoneFixo: '1111111',
-        //     telefoneCelular: '2132132131',
-        //     endereco: 'Rua blablabla'
-        // }];
+        
 
         $scope.contatos = [];
 
