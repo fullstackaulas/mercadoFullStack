@@ -28,7 +28,7 @@ angular.module('meuApp')
         listar();
 
         $scope.dados = {
-
+        id:'',
         nome: '',
         telefoneFixo:'',
         telefoneCelular:'',
@@ -48,14 +48,24 @@ angular.module('meuApp')
 
     $scope.delete = function(id) {
       $url = 'http://localhost:8000/api/agenda/deletar/'+ id;
-      $http.delete($url,id).then(function(response){
+      $http.delete($url).then(function(response){
         console.log(response);
       
       },function(error){
           console.log(error);
       });
     };
-
+    
+    $scope.editar = function(id) {
+      $url = 'http://localhost:8000/api/agenda/lerUm/'+ id;
+      $http.get($url).then(function(response){
+        console.log(response);
+        $scope.dados = response.data;
+      
+      },function(error){
+          console.log(error);
+      });
+    };
     
 
 
