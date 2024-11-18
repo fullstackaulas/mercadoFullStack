@@ -1,7 +1,6 @@
 angular.module('meuApp')
     .controller('AgendaController', function ($scope, $http) {
 
-        
         // <th>Nome</th>
         // <th>Telefone Fixo</th>
         // <th>Telefone Celular</th>
