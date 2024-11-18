@@ -1,6 +1,13 @@
 angular.module('meuApp')
     .controller('AgendaController', function ($scope, $http) {
 
+
+    //   Swal.fire({
+    //     title: 'Sucesso!',
+    //     text: 'Operação realizada com sucesso!',
+    //     icon: 'success',
+    //     confirmButtonText: 'Ok'
+    // });
         // <th>Nome</th>
         // <th>Telefone Fixo</th>
         // <th>Telefone Celular</th>
