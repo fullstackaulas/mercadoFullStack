@@ -1,0 +1,133 @@
+<style>
+    /* Resetando margin e padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Corpo da página */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* Container principal do login */
+    .login-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Caixa de login */
+    .login-box {
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 24px;
+    }
+
+    /* Estilização do formulário */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Grupo de input */
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-group label {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    .input-group input:focus {
+        border-color: #4CAF50;
+    }
+
+    /* Botão de login */
+    .login-btn {
+        padding: 15px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .login-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Link de registro */
+    .register-link {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #777;
+    }
+
+    .register-link a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+
+    .register-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+<div class="login-container" ng-show="estaLogado == false">
+    <div class="login-box">
+        <h2>Login - ComercIO</h2>
+        <form method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required
+                    ng-model="login.email">
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required
+                    ng-model="login.password">
+            </div>
+            <button type="button" class="login-btn" ng-click="logar()">Entrar</button>
+            <p class="register-link">Não tem uma conta? <a href="#">Registre-se</a></p>
+        </form>
+    </div>
+</div>
+
+<div class="login-container" ng-show="estaLogado == true">
+    <div class="login-box">
+        <h2>Você está logado,<br>
+            ola {{dadosDoUsuario.name}}</h2>
+        <button type="button" class="login-btn" ng-click="deslogar()">Deslogar</button>
+    </div>
+</div>
