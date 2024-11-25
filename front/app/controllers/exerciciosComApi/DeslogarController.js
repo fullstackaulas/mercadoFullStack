@@ -22,7 +22,9 @@ angular.module('meuApp')
    
                 }
             }, function (error) {
-
+                localStorage.removeItem('token');
+                localStorage.removeItem('usuario');
+                $state.go('login')
             })
         }
 
