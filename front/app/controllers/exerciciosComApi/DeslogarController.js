@@ -13,7 +13,6 @@ angular.module('meuApp')
                 }
             }
 
-
             $http.get($url, $config).then(function (response) {
                 if (response.status == 200) {
                     localStorage.removeItem('token');
@@ -27,6 +26,6 @@ angular.module('meuApp')
         }
 
 
-$scope.deslogar();
+    $scope.deslogar();
 
     });
