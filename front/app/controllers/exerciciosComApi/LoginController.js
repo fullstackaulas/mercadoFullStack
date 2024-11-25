@@ -1,5 +1,5 @@
 angular.module('meuApp')
-    .controller('LoginController', function ($scope, $http) {
+    .controller('LoginController', function ($scope, $http, $state) {
 
 
         $scope.login = {
@@ -35,6 +35,8 @@ angular.module('meuApp')
             $http.get($url, $config).then(function (response) {
                 console.log(response);
                 if (response.status == 200) {
+                    console.log(response.data);
+                    localStorage.setItem('usuario',JSON.stringify(response.data));
                     $scope.dadosDoUsuario = response.data;
                     $scope.estaLogado = true;
                 }
@@ -54,9 +56,9 @@ angular.module('meuApp')
             $http.post($url, $scope.login).then(function (response) {
                 if (response.status == 200) {
                     localStorage.setItem('token', response.data.token);
-
                     verificarMe();
-                    $scope.estaLogado = true;
+
+                    $state.go('main.home')
 
                 }
                 console.log(response);
@@ -79,6 +81,7 @@ angular.module('meuApp')
             $http.get($url, $config).then(function (response) {
                 if (response.status == 200) {
                     localStorage.removeItem('token');
+                    localStorage.removeItem('usuario');
                     $scope.estaLogado = false;
                     $scope.dadosDoUsuario = {
                         name: '',

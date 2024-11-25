@@ -4,12 +4,18 @@ angular.module('meuApp', ['ui.router'])
     $stateProvider
         .state('main', {
             abstract: true,
-            templateUrl: 'app/views/partials/comHeaderFooterEMenu.html', // Template com header, sidebar e footer
+            templateUrl: 'app/views/partials/comHeaderFooterEMenu.html', // Template com header, sidebar e footer,
+            controller: 'testeController'
         })
         .state('main.home', {
             url: '/',
             templateUrl: 'app/views/home.html', // Template da dashboard
             controller: 'testeController' // Controller para a dashboard
+        })
+        .state('deslogar', {
+            url: '/deslogar',
+            templateUrl: 'app/views/deslogar.html', // Template da dashboard
+            controller: 'DeslogarController' // Controller para a dashboard
         })
         .state('main.primeiroExercicio', {
             url: '/exercicios/primeiro',
@@ -72,10 +78,15 @@ angular.module('meuApp', ['ui.router'])
             controller: 'AgendaController' 
         })
         .state('login', {
-            url: '/exercicios/login',
+            url: '/login',
             templateUrl: 'app/views/exerciciosComApi/login.html',
             controller: 'LoginController' 
         })
+        //         .state('login', {
+        //     url: '/exercicios/login',
+        //     templateUrl: 'app/views/exerciciosComApi/login.html',
+        //     controller: 'LoginController' 
+        // })
 
 
 // contador de X até Y - Ok
