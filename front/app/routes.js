@@ -82,23 +82,12 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exerciciosComApi/login.html',
             controller: 'LoginController' 
         })
-        //         .state('login', {
-        //     url: '/exercicios/login',
-        //     templateUrl: 'app/views/exerciciosComApi/login.html',
-        //     controller: 'LoginController' 
-        // })
-
-
-// contador de X até Y - Ok
-// Calculadora IMC - Ok
-// calculadora de idade - ok
-// como identificar se uma palavra é um palindromo - ok
-//conversor de unidades
-//conversor de moedas de acordo com o valor da moeda
-//todo list
-
-
-// como fazer para identificar se duas palavras sao anagrama
+        .state('registrese', {
+            url: '/registrese',
+            templateUrl: 'app/views/exerciciosComApi/registrese.html',
+            controller: 'RegistreSeController' 
+        })
+  
 
    
     $urlRouterProvider.otherwise('/');
