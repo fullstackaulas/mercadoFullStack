@@ -10,25 +10,25 @@
     <div class="signup-container">
         <div class="signup-box">
             <h2>Cadastro - ComercIO</h2>
-            <form action="dashboard.html" method="POST">
+            <form method="POST">
                 <div class="input-group">
                     <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo" ng-model="info.name" required>
                 </div>
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" ng-model="info.email" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" ng-model="info.password" required>
                 </div>
                 <div class="input-group">
                     <label for="confirm-password">Confirmação de Senha</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha" required>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha" ng-model="info.senhaConfirmar" required>
                 </div>
-                <button type="submit" class="signup-btn">Cadastrar</button>
-                <p class="login-link">Já tem uma conta? <a href="#">Faça login</a></p>
+                <button type="button" class="signup-btn" ng-click="criarCadastro()">Cadastrar</button>
+                <p class="login-link">Já tem uma conta? <a ui-sref="login">Faça login</a></p>
             </form>
         </div>
     </div>
