@@ -6,7 +6,7 @@ angular.module('meuApp')
             email: '',
             password: ''
         }
-        
+
         $scope.dadosDoUsuario = {
             name: '',
             email: ''
@@ -17,11 +17,11 @@ angular.module('meuApp')
 
 
 
-        verificarMe = function () {
+        verificarMe = function (redirecionar) {
             $url = 'http://localhost:8000/api/usuarios/me';
 
             $token = localStorage.getItem('token');
-            
+
             if ($token == null) {
                 return;
             }
@@ -36,9 +36,12 @@ angular.module('meuApp')
                 console.log(response);
                 if (response.status == 200) {
                     console.log(response.data);
-                    localStorage.setItem('usuario',JSON.stringify(response.data));
+                    localStorage.setItem('usuario', JSON.stringify(response.data));
                     $scope.dadosDoUsuario = response.data;
-                    $scope.estaLogado = true;
+                    if (redirecionar == true) {
+                        $state.go('main.home')
+                    }
+
                 }
             }, function (error) {
                 console.log(error);
@@ -47,7 +50,7 @@ angular.module('meuApp')
         }
 
 
-        verificarMe();
+        verificarMe(false);
 
 
         $scope.logar = function () {
@@ -56,9 +59,8 @@ angular.module('meuApp')
             $http.post($url, $scope.login).then(function (response) {
                 if (response.status == 200) {
                     localStorage.setItem('token', response.data.token);
-                    verificarMe();
+                    verificarMe(true);
 
-                    $state.go('main.home')
 
                 }
                 console.log(response);
